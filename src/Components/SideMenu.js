@@ -9,6 +9,9 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+// пихнуть при тру аутефикации спешал фор ю руты 
+
+
 const styles = theme => ({
     button: {
         margin: theme.spacing.unit,
@@ -19,11 +22,17 @@ const styles = theme => ({
 });
 
 export class SideMenu extends React.Component{
+
+submit  = (event) => {
+      event.preventDefault();
+     };
+
     render(){
         return(
             <div className="items-container">
                 <div className="title-text">
                     Маршруты
+                    <button type="submit" onClick={this.submit} ></button>
                 </div>
                 <ExpansionPanel className="expandable-item">
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>

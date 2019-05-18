@@ -13,10 +13,13 @@ async function getPopRoutes() {
     }
 };
 
+
+
 // POST auth LOG/PASS
-async function authPost() {
+async function authPost(logPass) {
+    
     try {
-        const response = await axios.post('/user?ID=12345');
+        const response = await axios.post('http://api.redline.blur.tech/users/auth', logPass);
         console.log(response);
     } catch (error) {
         console.error(error);

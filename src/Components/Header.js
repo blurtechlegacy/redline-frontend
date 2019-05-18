@@ -8,6 +8,7 @@ import logo from '../Assets/Logo.svg';
 import '../Styles/HeaderStyles.css';
 import Typography from '@material-ui/core/Typography';
 
+
 const styles = {
     root: {
         flexGrow: 1,

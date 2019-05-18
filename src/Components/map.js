@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
 class Map extends Component {
+  
+   constructor(props) {
+        super(props);
+        this.state = {
+           // ГЕОлокация клиентa      
+           // массив точек популярных роутов 
+           // приемник точки полученной с клиента 
+        }
+    }
+ 
     render() {
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
@@ -21,3 +31,8 @@ class Map extends Component {
     }
 };
 export default Map;
+
+
+// 1) показать новосибирск 
+// 2) отрисовать популярные роуты с гет запроса 
+//
