@@ -27,33 +27,33 @@ export class SideMenu extends React.Component{
                 </div>
                 <ExpansionPanel className="expandable-item">
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                        <div className="subtitle-text">Popular</div>
+                        <div className="subtitle-text">Популярные</div>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <div className="expand-item">
                             <Button variant="outlined" color="primary">
-                                Route 1
+                                Красная линия
                             </Button>
                             <Button variant="outlined" color="primary">
-                                Route 2
+                                Трип по барам
                             </Button>
                             <Button variant="outlined" color="primary">
-                                Route 3
+                                От компа до толчка
                             </Button>
                         </div>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
                 <ExpansionPanel className="expandable-item">
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                        <div className="subtitle-text">Special for you</div>
+                        <div className="subtitle-text">Специально для тебя</div>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <div className="expand-item">
                             <Button variant="outlined" color="primary">
-                                Route 1
+                                Ростовская -> Реанимация
                             </Button>
                             <Button variant="outlined" color="primary">
-                                Route 2
+                                Я приехал из деревни, хочу в зару
                             </Button>
                         </div>
                     </ExpansionPanelDetails>

@@ -29,9 +29,9 @@ function ButtonAppBar(props) {
                 <Toolbar>
                     <img src={logo} className="logo" width="64" height="64"/>
                     <Typography variant="h6" className={classes.root} color="inherit">
-                        Красная линия
+                        КРАСНАЯ ЛИНИЯ
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Button color="inherit">Войти</Button>
                 </Toolbar>
             </AppBar>
         </div>
