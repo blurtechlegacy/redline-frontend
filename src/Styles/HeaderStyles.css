@@ -9,3 +9,9 @@
 .nav-container {
     background-color: #F2F2F2;
 }
+
+.brand {
+    font: 2rem 'YesevaOne-Regular.ttf';
+    font-weight: 600;
+    color: #BF1F1F;
+}

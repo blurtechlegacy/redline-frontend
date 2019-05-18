@@ -8,6 +8,10 @@
     flex-direction: column;
 }
 
+.expand-item > Button {
+    margin: 5px 0 5px 0;
+}
+
 .expandable-item {
     margin: 10px 0 10px 0;
 }

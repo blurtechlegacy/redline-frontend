@@ -6,7 +6,7 @@ const style = {
     margin: "10px 0 10px 0",
     fontSize: "1.5rem",
     fontWeight: "500"
-}
+};
 
 export default class CreatePoint extends React.Component{
     handleChange = name => event => {
@@ -18,31 +18,10 @@ export default class CreatePoint extends React.Component{
         return(
             <div className="items-container">
                 <div className="title-text">Оцените место</div>
-                <form noValidate autoComplete="off">
-                    <TextField
-                        id="outlined-name"
-                        label="Название места"
-                        onChange={this.handleChange('name')}
-                        margin="normal"
-                        fullWidth
-                        variant="outlined"
-                        style={style}
-                    />
-                    <TextField
-                        id="outlined-name"
-                        label="Описание места"
-                        multiline
-                        onChange={this.handleChange('name')}
-                        margin="normal"
-                        fullWidth
-                        variant="outlined"
-                        style={style}
-                    />
-                </form>
+                <input className="input-outline" placeholder="Название места"></input>
+                <input className="input-outline" placeholder="Описание места"></input>
                 <div className="create-button-centered">
-                    <Button variant="outlined" color="primary">
-                        Сохранить
-                    </Button>
+                    <button className="btn">Сохранить</button>
                 </div>
             </div>
         );

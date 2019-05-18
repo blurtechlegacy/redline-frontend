@@ -67,3 +67,46 @@
   font-size: 1.25rem;
   font-weight: 500;
 }
+
+.input-outline {
+  border-style: solid;
+  outline-width: 0;
+  border-width: thin;
+  border-radius: 5px;
+  height: 2rem;
+  padding: 2px 5px 2px 5px;
+  font-size: 1.25rem;
+  margin: 10px;
+}
+
+.input-outline:focus {
+  border-color: #D93D4A;
+  border-width: medium;
+}
+
+.btn {
+  background-color: white;
+  font-size: 1rem;
+  color: #D93D4A;
+  border-style: solid;
+  border-color: #D93D4A;
+  border-width: thin;
+  border-radius: 3px;
+  height: 2.4rem;
+  width: 10rem;
+  outline-width: 0;
+  margin: 10px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #D93D4A;
+  color: white;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: 'YesevaOne-Regular.ttf';
+  src: url('/Fonts/Yeseva_One');
+  font-weight: normal;
+}
