@@ -1,61 +1,23 @@
-import React, { Component } from "react";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
-import { geolocated } from "react-geolocated";
+import React, { Component } from 'react';
+import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
-const style = {
-    width: '50%',
-    height: '80%',
-    overflow: 'hidden'
-};
-
-export class MapContainer extends Component {
-    constructor(props) {
-        super(props);
-        this.onMarkerClick = this.onMarkerClick.bind(this);
-        this.state = {
-            showingInfoWindow: false,
-            activeMarker: {},
-            selectedPlace: {}
-        };
-    }
-    onMarkerClick(props, marker, e) {
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true
-        });
-        console.log(this.state);
-    }
+class Map extends Component {
     render() {
-        if (!this.props.google) {
-            return <div>Loading...</div>;
-        }
-
-        return (
-            <div>
-                <Map
-                    style={style}
-                    google={this.props.google}
-                    zoom={15}
-                >
-                    <Marker
-                        onClick={this.onMarkerClick}
-                        name={"Current location"}
-                    />
-                    <InfoWindow
-                        marker={this.state.activeMarker}
-                        visible={this.state.showingInfoWindow}
-                    >
-                        <div>
-                            <h1>{this.state.selectedPlace.name}</h1>
-                        </div>
-                    </InfoWindow>
-                </Map>
+        const GoogleMapExample = withGoogleMap(props => (
+            <GoogleMap
+                defaultCenter = { { lat: 40.756795, lng: -73.954298 } }
+                defaultZoom = { 13 }
+            >
+            </GoogleMap>
+        ));
+        return(
+            <div style={{ height: '60%', width: '100%'}}>
+                <GoogleMapExample
+                    containerElement={ <div style={{ height: '700px', width: 'inherit' }} /> }
+                    mapElement={ <div style={{ height: `100%` }} /> }
+                />
             </div>
         );
     }
-}
-export default GoogleApiWrapper({
-    apiKey: "AIzaSyDVsJx-Hyq6w4laps9vUcA1gbq-mWLtH78",
-    v: "3"
-})(MapContainer);
+};
+export default Map;

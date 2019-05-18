@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import Map from './Components/map.js';
 import Navbar from './Components/Header.js'
 import SideMenu from "./Components/SideMenu";
+import CreatePoint from "./Components/CreatePoint";
 
 function App() {
   return (
@@ -14,9 +14,12 @@ function App() {
               <div className="map-container">
                   <Map/>
               </div>
-          </div>
-          <div className="aside-container">
-              <SideMenu/>
+              <div className="aside-container">
+                  <SideMenu/>
+              </div>
+              <div className="create-container">
+                  <CreatePoint></CreatePoint>
+              </div>
           </div>
       </div>
   );

@@ -1,0 +1,9 @@
+.items-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.expand-item {
+    display: flex;
+    flex-direction: column;
+}

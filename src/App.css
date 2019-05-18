@@ -35,15 +35,35 @@
 .main-container {
   display: grid;
   grid-template-columns: 20% auto 20%;
-  grid-template-rows: auto;
 }
 
 .map-container {
   grid-column-start: 2;
   grid-column-end: 2;
+  margin: 10px;
 }
 
 .aside-container {
   grid-column-start: 1;
   grid-column-end: 1;
+  grid-row-start: 1;
+  margin: 10px;
+}
+
+.create-container {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  margin: 10px;
+}
+
+.title-text {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.subtitle-text {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
