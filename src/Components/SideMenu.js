@@ -23,9 +23,9 @@ export class SideMenu extends React.Component{
         return(
             <div className="items-container">
                 <div className="title-text">
-                    Side menu component
+                    Маршруты
                 </div>
-                <ExpansionPanel>
+                <ExpansionPanel className="expandable-item">
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                         <div className="subtitle-text">Popular</div>
                     </ExpansionPanelSummary>
@@ -43,7 +43,7 @@ export class SideMenu extends React.Component{
                         </div>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
-                <ExpansionPanel>
+                <ExpansionPanel className="expandable-item">
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                         <div className="subtitle-text">Special for you</div>
                     </ExpansionPanelSummary>

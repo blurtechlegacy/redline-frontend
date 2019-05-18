@@ -17,11 +17,11 @@ export default class CreatePoint extends React.Component{
     render(){
         return(
             <div className="items-container">
-                <div className="title-text">Create point component</div>
+                <div className="title-text">Оцените место</div>
                 <form noValidate autoComplete="off">
                     <TextField
                         id="outlined-name"
-                        label="Place name"
+                        label="Название места"
                         onChange={this.handleChange('name')}
                         margin="normal"
                         fullWidth
@@ -30,7 +30,7 @@ export default class CreatePoint extends React.Component{
                     />
                     <TextField
                         id="outlined-name"
-                        label="Description"
+                        label="Описание места"
                         multiline
                         onChange={this.handleChange('name')}
                         margin="normal"
@@ -41,7 +41,7 @@ export default class CreatePoint extends React.Component{
                 </form>
                 <div className="create-button-centered">
                     <Button variant="outlined" color="primary">
-                        Create Point
+                        Сохранить
                     </Button>
                 </div>
             </div>

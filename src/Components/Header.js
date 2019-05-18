@@ -6,6 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import logo from '../Assets/Logo.svg';
 import '../Styles/HeaderStyles.css';
+import Typography from '@material-ui/core/Typography';
 
 const styles = {
     root: {
@@ -27,6 +28,9 @@ function ButtonAppBar(props) {
             <AppBar position="static" color="inherit" className="nav-shadow">
                 <Toolbar>
                     <img src={logo} className="logo" width="64" height="64"/>
+                    <Typography variant="h6" className={classes.root} color="inherit">
+                        Красная линия
+                    </Typography>
                     <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
