@@ -7,6 +7,7 @@ import SideMenu from "./Components/SideMenu";
 import CreatePoint from "./Components/CreatePoint";
 import {authPost, getPopRoutes} from './ApiWorker.js';
 import Geoloc from './Components/Geoloc.js'
+
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -26,7 +27,6 @@ class App extends React.Component {
  render () { 
   return (
        <div>
-       <Geoloc {...this.props} />
            <Navbar></Navbar>
            <div className="main-container">
                <div className="map-container">

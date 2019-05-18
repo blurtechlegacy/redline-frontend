@@ -25,6 +25,26 @@ export class SideMenu extends React.Component{
 
 submit  = (event) => {
       event.preventDefault();
+      var options = {
+  enableHighAccuracy: false,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
      };
 
     render(){
@@ -32,7 +52,7 @@ submit  = (event) => {
             <div className="items-container">
                 <div className="title-text">
                     Маршруты
-                    <button type="submit" onClick={this.submit} ></button>
+                    <button type="submit" onClick={this.submit} >ГДЕ БЛЯТЬ Я НАХОЖУСЬ</button>
                 </div>
                 <ExpansionPanel className="expandable-item">
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
