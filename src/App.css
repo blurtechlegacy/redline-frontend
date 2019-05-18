@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+
+.main-container {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-template-rows: auto;
+}
+
+.map-container {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.aside-container {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
