@@ -1,0 +1,11 @@
+.nav-shadow {
+    box-shadow: 0 0 10px red;
+}
+
+.logo {
+    padding: 5px;
+}
+
+.nav-container {
+    background-color: #F2F2F2;
+}
