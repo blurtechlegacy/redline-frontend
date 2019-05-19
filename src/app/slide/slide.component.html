@@ -1,6 +1,6 @@
 <div class="items-container">
   <div class="title-text">Маршруты</div>
   <div class="expandable-item" *ngFor="let route of routeNames">
-    <button class="btn">{{route}}</button>
+    <button class="btn" (click)="changeState(route)">{{route}}</button>
   </div>
 </div>

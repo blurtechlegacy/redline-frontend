@@ -15,10 +15,11 @@ export class ApiService {
     const options = new HttpParams().set('city', city);
     return this.http.get<Response>(this.url + '/routes', {params: options}).toPromise();
   }
-  authorize(login: string, password: string): Promise<AuthResponse> {
+  authorize(login: string, password: string): Observable<AuthResponse> {
     const body = {
       login, password
     };
-    return this.http.post<AuthResponse>(this.url + '/users/auth', body).toPromise();
+    console.log(body);
+    return this.http.post<AuthResponse>(this.url + '/users/auth', body);
   }
 }

@@ -1,4 +1,6 @@
 <agm-map [latitude]="latOrigin" [longitude]="lngOrigin" [zoom]="17">
   <agm-marker [latitude]="latOrigin" [longitude]="lngOrigin"></agm-marker>
-  <agm-direction [origin]="origin" [destination]="destination" [waypoints]="waypoints"></agm-direction>
+  <div *ngIf="condition">
+    <agm-direction [origin]="origin" [destination]="destination" [waypoints]="waypoints" [travelMode]="'WALKING'"></agm-direction>
+  </div>
 </agm-map>
