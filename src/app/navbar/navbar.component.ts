@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../api.service';
 import {AuthResponse} from '../auth-response';
+import {UserProviderService} from '../user-provider.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,7 @@ export class NavbarComponent implements OnInit {
   password: string;
   authorized = false;
   name: string;
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private user: UserProviderService) { }
 
   ngOnInit() {
   }
@@ -24,7 +25,7 @@ export class NavbarComponent implements OnInit {
       if (result.success) {
         this.authorized = true;
         this.name = result.data.name;
-        console.log(result.data.name);
+        this.user.setUser(result);
       } else {
         console.log(result);
       }

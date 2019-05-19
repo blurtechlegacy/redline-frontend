@@ -1,5 +1,8 @@
 <div class="items-container">
-  <div class="title-text">Оцените место</div>
-  <input class="input-outline" placeholder="Название места" cols="20" [(ngModel)]="placeName">
-  <input class="input-outline" placeholder="Описание места" rows="5" cols="20" [(ngModel)]="placeDescription">
+  <div class="title-text">Предпочтения</div>
+  <div *ngIf="username != null">
+    <div *ngFor="let pref of username.data.preferences" class="pref-list">
+      {{pref}}
+    </div>
+  </div>
 </div>
