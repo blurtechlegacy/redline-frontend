@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../api.service';
 import {last} from 'rxjs/operators';
+import {Waypoint} from '../waypoint';
 
 @Component({
   selector: 'app-map',
@@ -12,7 +13,7 @@ export class MapComponent implements OnInit {
   public lngOrigin: number;
   public latDestination: number;
   public lngDestination: number;
-
+  public waypoints: any = [];
   public origin: any;
   public destination: any;
   constructor(private api: ApiService) {
@@ -31,15 +32,22 @@ export class MapComponent implements OnInit {
     const firstPoint = routes[0].geos[0];
     const lastPoint = routes[0].geos[lastIndex];
     console.log(firstPoint.geo);
-    setTimeout(() => {
-      this.origin = {
-        lat: firstPoint.geo[0],
-        lng: firstPoint.geo[1]
-      };
-      this.destination = {
-        lat: lastPoint.geo[0],
-        lng: lastPoint.geo[1]
-      };
-    }, 400);
+    this.origin = {
+      lat: firstPoint.geo[0],
+      lng: firstPoint.geo[1]
+    };
+    this.destination = {
+      lat: lastPoint.geo[0],
+      lng: lastPoint.geo[1]
+    };
+    const waypoints = routes[0].geos.slice(1, lastIndex);
+    console.log(waypoints);
+    const point = waypoints[0];
+    console.log(point);
+    console.log(this.waypoints);
+    this.waypoints.push(123);
+    console.log(this.waypoints);
+    console.log('Waypoints coming');
+    console.log(this.waypoints);
   }
 }
