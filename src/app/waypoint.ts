@@ -4,10 +4,7 @@ export class Waypoint {
     lng: number;
   };
   stopover: boolean;
-  constructor(lat: number, lng: number) {
-    this.location.lat = lat;
-    this.location.lng = lng;
+  constructor() {
     this.stopover = true;
-    console.log(this);
   }
 }
