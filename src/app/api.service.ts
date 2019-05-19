@@ -3,20 +3,22 @@ import {Route} from './route';
 import {Observable} from 'rxjs';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import { Response } from './response';
+import { AuthResponse } from './auth-response';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  url = 'http://api.redline.blur.tech/routes';
+  url = 'http://api.redline.blur.tech';
   constructor(private http: HttpClient) { }
   getRoutes(city: string): Promise<Response> {
     const options = new HttpParams().set('city', city);
-    return this.http.get<Response>(this.url, {params: options}).toPromise();
+    return this.http.get<Response>(this.url + '/routes', {params: options}).toPromise();
   }
-  authorize(login: string, password: string): Promise<any> {
+  authorize(login: string, password: string): Promise<AuthResponse> {
     const body = {
       login, password
     };
-    return this.http.post(this.url + '/auth', body).toPromise();
+    return this.http.post<AuthResponse>(this.url + '/users/auth', body).toPromise();
   }
 }

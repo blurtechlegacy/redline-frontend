@@ -1,9 +1,6 @@
 export class Geo {
   tags: string[];
-  geo: {
-    lat: number,
-    lng: number
-  };
+  geo: number[];
   name: string;
   city: string;
   description: string;
