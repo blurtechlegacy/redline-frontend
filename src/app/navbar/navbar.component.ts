@@ -29,6 +29,20 @@ export class NavbarComponent implements OnInit {
       } else {
         console.log(result);
       }
-    }, 350);
+    }, 600);
+  }
+  register() {
+    let result;
+    this.api.register(this.login, this.password).subscribe(r => result = r);
+    setTimeout(() => {
+      console.log(result);
+      if (result.success) {
+        this.authorized = true;
+        this.name = result.data.name;
+        this.user.setUser(result);
+      } else {
+        console.log(result);
+      }
+    }, 1000);
   }
 }

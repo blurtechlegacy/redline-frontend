@@ -22,4 +22,10 @@ export class ApiService {
     console.log(body);
     return this.http.post<AuthResponse>(this.url + 'users/auth', body);
   }
+  register(login: string, password: string): Observable<AuthResponse> {
+    const body = {
+      login, password
+    };
+    return this.http.post<AuthResponse>(this.url + 'users/reg', body);
+  }
 }

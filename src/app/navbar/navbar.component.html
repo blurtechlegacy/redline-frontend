@@ -6,6 +6,7 @@
     <input type="text" placeholder="Логин" class="input-outline nav-item" [(ngModel)]="login" *ngIf="!authorized">
     <input type="text" placeholder="Пароль" class="input-outline nav-item" [(ngModel)]="password" *ngIf="!authorized">
     <button class="nav-item btn" (click)="authorize();" *ngIf="!authorized">Войти</button>
+    <button class="nav-item btn" (click)="register();" *ngIf="!authorized">Зарегистрироваться</button>
     <div class="nav-item nav-first user-info" *ngIf="authorized">Пользователь с именем: {{name}}</div>
   </div>
 </div>
