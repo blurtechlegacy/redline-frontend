@@ -1,0 +1,41 @@
+.nav-shadow {
+  box-shadow: 0 0 10px red;
+}
+
+.logo {
+  padding: 5px;
+}
+
+.nav-container {
+  background-color: #F2F2F2;
+  width: 100%;
+  position: sticky;
+}
+
+.brand {
+  font: 2rem 'YesevaOne-Regular.ttf';
+  font-weight: 600;
+  color: #BF1F1F;
+}
+
+.nav {
+  width: 100%;
+  position: sticky;
+  background-color: #F2F2F2;
+  height: 70px;
+  display: flex;
+  border-bottom: #D93D4A solid thin;
+}
+
+.nav > img {
+  margin: auto 0 auto 5rem;
+}
+
+.nav-item {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.nav-first {
+  margin-left: 45%;
+}

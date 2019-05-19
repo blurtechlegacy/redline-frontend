@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+.main-container {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+}
+
+.map-container {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  margin: 10px;
+}
+
+.aside-container {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  margin: 10px;
+}
+
+.create-container {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  margin: 10px;
+}
+
+.title-text {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin: 10px;
+}
+
+.subtitle-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.input-outline {
+  border-style: solid;
+  outline-width: 0;
+  border-width: 1px;
+  border-radius: 5px;
+  height: 2rem;
+  padding: 2px 5px 2px 5px;
+  font-size: 1rem;
+  margin: 10px;
+}
+
+.input-outline:focus {
+  border-color: #D93D4A;
+  border-width: 2px;
+  padding: 1px 4px 1px 4px;
+}
+
+.btn {
+  background-color: white;
+  font-size: 1rem;
+  color: #D93D4A;
+  border-style: solid;
+  border-color: #D93D4A;
+  border-width: thin;
+  border-radius: 3px;
+  height: 2.4rem;
+  width: 10rem;
+  outline-width: 0;
+  margin: 10px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #D93D4A;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+.items-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  margin: 10px 0 10px 0;
+}
+
+.input-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.create-button-centered {
+  margin: 10px auto;
+}
