@@ -29,13 +29,9 @@ export class MapComponent implements OnInit {
     const response = await this.api.getRoutes('Новосибирск');
     const routes = response.data;
     const lastIndex = routes[0].geos.length - 1;
-    const firstPoint = routes[0].geos[0];
     const lastPoint = routes[0].geos[lastIndex];
-    console.log(firstPoint.geo);
     this.origin = this.createWaypoint(this.latOrigin, this.lngOrigin);
-    console.log(this.origin);
     this.destination = this.createWaypoint(lastPoint.geo[0], lastPoint.geo[1]);
-    console.log(this.destination);
     const waypoints = routes[0].geos.slice(0, lastIndex);
     waypoints.forEach(elem => this.waypoints.push(this.createWaypoint(elem.geo[0], elem.geo[1])));
     console.log(this.waypoints);
